@@ -4,17 +4,12 @@ const GET_GREETING = 'GET_GREETING';
 
 const getGreeting = () => async (dispatch) => {
   const greeting = fetchGreeting();
-  greeting
-    .then((data) => {
-      console.log('DATA' + data);
-      dispatch({
-        type: GET_GREETING,
-        payload: data,
-      });
-    })
-    .catch((err) => {
-      console.log('ERROR:' + err);
+  greeting.then((data) => {
+    dispatch({
+      type: GET_GREETING,
+      payload: data,
     });
+  });
 };
 
 const reducer = (greeting = '', action) => {

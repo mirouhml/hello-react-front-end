@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getGreeting } from '../redux/greetings/greetings_data';
+
 const Greeting = () => {
   const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting);
@@ -11,7 +12,10 @@ const Greeting = () => {
 
   return (
     <div>
-      <h1>Greeting: {greeting === '' ? '...loading' : greeting}</h1>
+      <h1>
+        Greeting:
+        {greeting === '' ? '...loading' : greeting}
+      </h1>
     </div>
   );
 };

@@ -8,18 +8,16 @@ import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import Greeting from './components/Greeting';
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <React.Fragment>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Greeting />} />
-          </Routes>
-        </Router>
-      </React.Fragment>
-    </Provider>
-  );
-};
+const App = () => (
+  <Provider store={store}>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Greeting />} />
+        </Routes>
+      </Router>
+    </>
+  </Provider>
+);
 
 export default App;

@@ -1,6 +1,6 @@
 const getGreeting = async () => {
   const response = await fetch('http://127.0.0.1:3000/greeting', {
-    method: 'GET', // or 'PUT'
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
